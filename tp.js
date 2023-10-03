@@ -4,7 +4,7 @@ let kingdomTotal = {}; // on créé notre dictionnaire de valeur qui va nous ser
 let divKingdoms = {}; // on créé ici un autre dictionnaire pour répertorié toutes les division et leur subkingdom associé.
 
 let divisions = await axios // ici on récupère les données des divisions sur lesquels on boucle pour rentrer leur noms dans notre dictionnaire ainsi qu'une valeur par défaut pour le nombre de plantes
-  .get(`https://trefle.io/api/v1/divisions${authToken}`)
+  .get(`https://cors-anywhere.herokuapp.com/https://trefle.io/api/v1/divisions${authToken}`)
   .then(response => response.data)
   .catch(err => console.log(err));
   const divData = divisions.data;
